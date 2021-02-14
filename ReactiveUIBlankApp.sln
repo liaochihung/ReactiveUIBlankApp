@@ -23,6 +23,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginModule", "Modules\Logi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaderModule", "Modules\HeaderModule\HeaderModule.csproj", "{622D8012-9496-45A5-A992-826B1BEFB65C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{49EDFABD-F772-46D6-918F-477EAAD6180C}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactiveUIBlankApp.Languages", "Infrastructure\ReactiveUIBlankApp.Languages\ReactiveUIBlankApp.Languages.csproj", "{5B3FB5CB-C007-43BF-A41E-CEFD15EDA988}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +60,10 @@ Global
 		{622D8012-9496-45A5-A992-826B1BEFB65C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{622D8012-9496-45A5-A992-826B1BEFB65C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{622D8012-9496-45A5-A992-826B1BEFB65C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B3FB5CB-C007-43BF-A41E-CEFD15EDA988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B3FB5CB-C007-43BF-A41E-CEFD15EDA988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B3FB5CB-C007-43BF-A41E-CEFD15EDA988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B3FB5CB-C007-43BF-A41E-CEFD15EDA988}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +75,7 @@ Global
 		{D3AC237A-674F-4E8E-8C61-AA84E755901F} = {9538BDE9-446D-45E2-B5B0-F4EA2E896857}
 		{B8B61513-30DC-4747-8167-8931A6404ABA} = {83D17D6B-F596-43B2-8FC1-EA36C2C4E705}
 		{622D8012-9496-45A5-A992-826B1BEFB65C} = {83D17D6B-F596-43B2-8FC1-EA36C2C4E705}
+		{5B3FB5CB-C007-43BF-A41E-CEFD15EDA988} = {8724C80A-5EFF-451B-BC5F-BBDF0735C430}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E62BAF0A-D471-40F4-AFAD-6DDC84C713F7}
