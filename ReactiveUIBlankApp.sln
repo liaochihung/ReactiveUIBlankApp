@@ -25,7 +25,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeaderModule", "Modules\Hea
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{49EDFABD-F772-46D6-918F-477EAAD6180C}"
 	ProjectSection(SolutionItems) = preProject
+		Solution Items\ProjectStructure.png = Solution Items\ProjectStructure.png
 		README.md = README.md
+		Solution Items\Screen.png = Solution Items\Screen.png
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactiveUIBlankApp.Languages", "Infrastructure\ReactiveUIBlankApp.Languages\ReactiveUIBlankApp.Languages.csproj", "{5B3FB5CB-C007-43BF-A41E-CEFD15EDA988}"
