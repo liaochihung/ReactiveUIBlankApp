@@ -1,7 +1,7 @@
 ﻿
 namespace ReactiveUIBlankApp.WinFormShell
 {
-    partial class FormMain
+    partial class FormShellView
     {
         /// <summary>
         /// 設計工具所需的變數。
@@ -29,25 +29,35 @@ namespace ReactiveUIBlankApp.WinFormShell
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormShellView));
+            this.routedControlHost = new ReactiveUI.Winforms.RoutedControlHost();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.繁體中文ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlTop = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlBottom = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.pnlRight = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.statusStrip1.SuspendLayout();
             this.pnlTop.SuspendLayout();
             this.pnlBottom.SuspendLayout();
             this.pnlRight.SuspendLayout();
             this.pnlContent.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // routedControlHost
+            // 
+            this.routedControlHost.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.routedControlHost.DefaultContent = null;
+            resources.ApplyResources(this.routedControlHost, "routedControlHost");
+            this.routedControlHost.Name = "routedControlHost";
+            this.routedControlHost.Router = null;
+            this.routedControlHost.ViewLocator = null;
             // 
             // statusStrip1
             // 
@@ -84,11 +94,21 @@ namespace ReactiveUIBlankApp.WinFormShell
             resources.ApplyResources(this.pnlTop, "pnlTop");
             this.pnlTop.Name = "pnlTop";
             // 
+            // label2
+            // 
+            resources.ApplyResources(this.label2, "label2");
+            this.label2.Name = "label2";
+            // 
             // pnlBottom
             // 
             this.pnlBottom.Controls.Add(this.label3);
             resources.ApplyResources(this.pnlBottom, "pnlBottom");
             this.pnlBottom.Name = "pnlBottom";
+            // 
+            // label3
+            // 
+            resources.ApplyResources(this.label3, "label3");
+            this.label3.Name = "label3";
             // 
             // pnlRight
             // 
@@ -96,8 +116,14 @@ namespace ReactiveUIBlankApp.WinFormShell
             resources.ApplyResources(this.pnlRight, "pnlRight");
             this.pnlRight.Name = "pnlRight";
             // 
+            // label4
+            // 
+            resources.ApplyResources(this.label4, "label4");
+            this.label4.Name = "label4";
+            // 
             // pnlContent
             // 
+            this.pnlContent.Controls.Add(this.routedControlHost);
             this.pnlContent.Controls.Add(this.label1);
             resources.ApplyResources(this.pnlContent, "pnlContent");
             this.pnlContent.Name = "pnlContent";
@@ -107,22 +133,7 @@ namespace ReactiveUIBlankApp.WinFormShell
             resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
             // 
-            // label2
-            // 
-            resources.ApplyResources(this.label2, "label2");
-            this.label2.Name = "label2";
-            // 
-            // label3
-            // 
-            resources.ApplyResources(this.label3, "label3");
-            this.label3.Name = "label3";
-            // 
-            // label4
-            // 
-            resources.ApplyResources(this.label4, "label4");
-            this.label4.Name = "label4";
-            // 
-            // FormMain
+            // FormShellView
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -131,7 +142,7 @@ namespace ReactiveUIBlankApp.WinFormShell
             this.Controls.Add(this.pnlBottom);
             this.Controls.Add(this.pnlTop);
             this.Controls.Add(this.statusStrip1);
-            this.Name = "FormMain";
+            this.Name = "FormShellView";
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.pnlTop.ResumeLayout(false);
@@ -161,6 +172,7 @@ namespace ReactiveUIBlankApp.WinFormShell
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private ReactiveUI.Winforms.RoutedControlHost routedControlHost;
     }
 }
 

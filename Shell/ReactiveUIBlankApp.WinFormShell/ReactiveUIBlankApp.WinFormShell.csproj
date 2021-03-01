@@ -142,11 +142,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormMain.cs">
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="FormShellView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <Compile Include="FormShellView.Designer.cs">
+      <DependentUpon>FormShellView.cs</DependentUpon>
     </Compile>
     <Compile Include="Language.cs" />
     <Compile Include="LanguageType.cs" />
@@ -157,6 +158,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Language.resx</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\MainContentViewModel.cs" />
+    <Compile Include="ViewModels\ShellViewModel.cs" />
     <Compile Include="Views\FormDock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,14 +178,20 @@
     <Compile Include="Views\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FormMain.en-US.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <Compile Include="Views\MainContent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\MainContent.Designer.cs">
+      <DependentUpon>MainContent.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormShellView.en-US.resx">
+      <DependentUpon>FormShellView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <EmbeddedResource Include="FormShellView.resx">
+      <DependentUpon>FormShellView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMain.zh-TW.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <EmbeddedResource Include="FormShellView.zh-TW.resx">
+      <DependentUpon>FormShellView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -219,6 +228,9 @@
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <EmbeddedResource Include="Views\MainContent.resx">
+      <DependentUpon>MainContent.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>

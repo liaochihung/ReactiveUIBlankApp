@@ -16,7 +16,11 @@ namespace ReactiveUIBlankApp.WinFormShell
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMain());
+
+            //Application.Run(new FormShellView());
+
+            var boostrapper = new Bootstrapper();
+            boostrapper.Run();
         }
     }
 }

@@ -1,4 +1,6 @@
-﻿using ReactiveUIBlankApp.WinFormShell.Views;
+﻿using ReactiveUI;
+using ReactiveUIBlankApp.WinFormShell.ViewModels;
+using ReactiveUIBlankApp.WinFormShell.Views;
 using System;
 using System.ComponentModel;
 using System.Globalization;
@@ -9,13 +11,21 @@ using System.Windows.Forms;
 
 namespace ReactiveUIBlankApp.WinFormShell
 {
-    public partial class FormMain : Form
+    public partial class FormShellView : Form, IViewFor<ShellViewModel>
     {
         public string language = Properties.Settings.Default.Language;
 
         private static readonly NLog.Logger _logger = NLog.LogManager.GetCurrentClassLogger();
 
-        public FormMain()
+        public ShellViewModel ViewModel { get; set; }
+
+        object IViewFor.ViewModel
+        {
+            get => ViewModel;
+            set => ViewModel=(ShellViewModel)value;
+        }
+
+        public FormShellView()
         {
             InitializeComponent();
 
@@ -24,11 +34,26 @@ namespace ReactiveUIBlankApp.WinFormShell
 
             Language.Apply(this, language);
 
-            var header = new HeaderView();
-            pnlTop.Controls.Clear();
-            pnlTop.Controls.Add(header);
+            //var header = new HeaderView();
+            //pnlTop.Controls.Clear();
+            //pnlTop.Controls.Add(header);
 
             _logger.Debug("form1 constructure.");
+
+            this.WhenActivated(d =>
+            {
+                // Bind router
+                d(this.OneWayBind(ViewModel, vm => vm.Router, v => v.routedControlHost.Router));
+
+                // Bind properties
+                d(this.OneWayBind(ViewModel, vm => vm.ApplicationTitle, v => v.Text));
+
+                // Bind commands
+                //d(this.BindCommand(ViewModel, vm => vm.ShowHomeCommand, v => v.btHome));
+                //d(this.BindCommand(ViewModel, vm => vm.ShowAboutCommand, v => v.btAbout));
+                //d(this.BindCommand(ViewModel, vm => vm.ShowContactCommand, v => v.btContact));
+                //d(this.BindCommand(ViewModel, vm => vm.GoBackCommand, v => v.btGoBack));
+            });
         }
 
 
